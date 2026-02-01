@@ -10,6 +10,7 @@ Sistema de autenticación completo con un diseño moderno y fluido, utilizando u
 
 ## 🛠️ Stack Tecnológico
 - **Frontend:** React.js, Axios, CSS3 (Animaciones avanzadas).
+              Basado en este pryecto de github: https://github.com/AsmrProg-YT/Modern-Login
 - **Backend:** Python, FastAPI, Uvicorn.
 - **Base de Datos:** PostgreSQL.
 
