@@ -5,7 +5,7 @@ Sistema de autenticación completo con un diseño moderno y fluido, utilizando u
 ## 🚀 Características Principales
 - **Interfaz "Sliding Panel":** Transiciones suaves entre Login y Registro en una sola vista.
 - **Diseño Dark & Lime:** Estética moderna optimizada con colores verde lima y tonos oscuros.
-- **Validación Robusta:** Gestión de datos con esquemas de Pydantic en el servidor.
+- **Validación Robusta:** Gestión de datos con esquemas de Pydantic en el servidor y cifradoi de contraseña.
 - **Arquitectura Escalable:** Separación clara entre la lógica de cliente (React) y servidor (FastAPI).
 
 ## 🛠️ Stack Tecnológico
