@@ -22,26 +22,27 @@ El repositorio está organizado de la siguiente manera:
 
 ## ⚙️ Instalación y Configuración
 
-### 1. Clonar el repositorio
-```bash
-git clone [https://github.com/alvarodrop/LogInFastApi.git](https://github.com/alvarodrop/LogInFastApi.git)
-cd LogInFastApi
+1. Clonar el repositorio
 
-### 2. Configurar el Backend 🐍
+git clone [https://github.com/alvarodrop/LogInFastApi.git](https://github.com/alvarodrop/LogInFastApi.git)
+cd LogInFastApi 
+
+2. Configurar el Backend 🐍
 Entra en la carpeta del servidor y prepara el entorno:
 
-```bash
+
 cd Login/backend
 python -m venv venv
+
 # Activar en Windows:
 venv\Scripts\activate  
 pip install fastapi uvicorn pydantic psycopg2
 uvicorn main:app --reload
 
-### 3. Configurar el Frontend ⚛️
+3. Configurar el Frontend ⚛️
 Abre una nueva terminal, entra en la carpeta del cliente e instala las librerías:
 
-```bash
+
 cd Login/frontend
 npm install
 npm start
