@@ -1,28 +1,35 @@
 import { useState } from "react";
+import Welcome from "./pages/Welcome"; // Nuevo componente
 import ModernLogin from "./pages/ModernLogin";
-import Dashboard from "./pages/Dashboard"; // La página a la que entrarás
+import Portfolio from "./pages/Portfolio"; 
 
 function App() {
-  // Si user es null, no ha entrado nadie. Si tiene datos, estamos dentro.
   const [user, setUser] = useState(null);
+  const [showLogin, setShowLogin] = useState(false); // Nuevo estado
 
-  // Esta función se ejecutará cuando el login en ModernLogin sea exitoso
   const handleLoginSuccess = (userData) => {
-    setUser(userData); 
+    setUser(userData);
   };
 
   const handleLogout = () => {
-    setUser(null); // Al cerrar sesión, volvemos al Login
+    setUser(null);
+    setShowLogin(false); // Volvemos al inicio al cerrar sesión
   };
 
   return (
     <div className="App">
+      {/* FLUJO DE NAVEGACIÓN */}
       {!user ? (
-        // PASO A: Si no hay usuario, mostramos el Login elegante
-        <ModernLogin onLoginSuccess={handleLoginSuccess} />
+        !showLogin ? (
+          /* PASO 1: Pantalla de Bienvenida */
+          <Welcome onStart={() => setShowLogin(true)} />
+        ) : (
+          /* PASO 2: Login (Solo aparece si pulsan el botón en Welcome) */
+          <ModernLogin onLoginSuccess={handleLoginSuccess} />
+        )
       ) : (
-        // PASO B: Si hay usuario, mostramos la App (Dashboard)
-        <Dashboard user={user} onLogout={handleLogout} />
+        /* PASO 3: Portfolio (Solo tras Login exitoso) */
+        <Portfolio user={user} onLogout={handleLogout} />
       )}
     </div>
   );
